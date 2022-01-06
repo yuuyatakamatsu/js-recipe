@@ -3,7 +3,7 @@
     "browser": true,
     "es6": true
   },
-  "extends": ["eslint:recommended"],
+  "extends": ["eslint:recommended", "prettier"],
   "plugins": ["eslint-plugin-html"],
   "globals": {
     "Vue": true
