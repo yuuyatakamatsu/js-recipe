@@ -2,31 +2,31 @@
 // Vue はページの一部分（ el で指定した範囲）に適用できるので、1ページにいっぱいあっても大丈夫です
 
 new Vue({
-  el: '#v-if',
+  el: "#v-if",
   data: {
-    seen: false
+    seen: false,
   },
   methods: {
     hyouji: function () {
       this.seen = true
-    }
-  }
+    },
+  },
 })
 
 new Vue({
   el: "#v-if-sign-in",
   data: {
-    user: null
+    user: null,
   },
   methods: {
     signIn() {
       this.user = {
-        name: "ギーク太郎"
+        name: "ギーク太郎",
       }
     },
     signOut() {
       this.user = null
-    }
+    },
   },
 })
 
@@ -34,7 +34,7 @@ new Vue({
   el: "#v-for",
   data: {
     animals: ["ふらみんご", "ごりら", "らいおん"],
-  }
+  },
 })
 
 new Vue({

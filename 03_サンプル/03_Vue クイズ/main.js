@@ -1,4 +1,4 @@
-new Vue({
+const Quiz = {
   el: "#app",
   data: {
     feedback: "",
@@ -40,4 +40,5 @@ new Vue({
       return "./images/" + this.quiz.image
     },
   },
-})
+}
+Vue.createApp(Quiz).mount("#app")

@@ -5,7 +5,7 @@ const addButton = document.getElementById("add-button")
 let list = JSON.parse(localStorage["list"] || "[]")
 
 // 追加ボタンを押したら
-addButton.onclick = function() {
+addButton.onclick = function () {
   // テキストをとりだす
   const text = inputElement.value
 
@@ -24,7 +24,7 @@ addButton.onclick = function() {
 }
 
 // 共通の処理：テキストからカードを作成する
-const createCard = function(text) {
+const createCard = function (text) {
   // カードの枠を作る
   const card = document.createElement("div")
   card.className = "card"
@@ -40,7 +40,7 @@ const createCard = function(text) {
   deleteButton.className = "delete"
 
   // 削除ボタンを押したら
-  deleteButton.onclick = function() {
+  deleteButton.onclick = function () {
     // listからテキストを削除する
     let index = 0
     for (const child of container.children) {

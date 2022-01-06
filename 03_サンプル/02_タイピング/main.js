@@ -21,18 +21,18 @@ let currentMondaiIndex = 0
 let timerId = null
 let time = 0
 
-startButton.onclick = function() {
+startButton.onclick = function () {
   mondaiDisplay.textContent = mondais[0]
   startWindow.style.display = "none"
   mondaiWindow.style.display = "block"
   input.focus()
-  timerId = setInterval(function() {
+  timerId = setInterval(function () {
     time += 1
     timeDisplay.textContent = time / 10 + " 秒"
   }, 100)
 }
 
-const nextMondai = function() {
+const nextMondai = function () {
   currentMondaiIndex += 1
   if (currentMondaiIndex < mondais.length) {
     mondaiDisplay.textContent = mondais[currentMondaiIndex]
@@ -45,7 +45,7 @@ const nextMondai = function() {
 }
 
 // エンターキーを押したとき、正誤判定する
-input.onkeyup = function(e) {
+input.onkeyup = function (e) {
   if (e.key === "Enter") {
     if (input.value === mondais[currentMondaiIndex]) {
       // 正解
@@ -56,7 +56,7 @@ input.onkeyup = function(e) {
 }
 
 // リセットボタン
-resetButton.onclick = function() {
+resetButton.onclick = function () {
   time = 0
   currentMondaiIndex = 0
   resultWindow.style.display = "none"

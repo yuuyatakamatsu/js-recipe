@@ -14,7 +14,7 @@ const list = JSON.parse(localStorage.list || "[]")
 //   list = JSON.parse(localStorage.list)
 // }
 
-button.onclick = function() {
+button.onclick = function () {
   const text = input.value
 
   // データを更新するコード
@@ -31,15 +31,15 @@ button.onclick = function() {
  * Vue
  */
 new Vue({
-  el: '#app',
+  el: "#app",
   data: {
     text: "",
-    list: JSON.parse(localStorage.list || "[]") // ["こんにちは", "おっす"]
+    list: JSON.parse(localStorage.list || "[]"), // ["こんにちは", "おっす"]
   },
   methods: {
-    addCard: function(){
+    addCard: function () {
       this.list.push(this.text)
       localStorage.list = JSON.stringify(this.list)
-    }
-  }
+    },
+  },
 })
