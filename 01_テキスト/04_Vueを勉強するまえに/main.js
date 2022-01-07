@@ -30,11 +30,12 @@ button.onclick = function () {
 /**
  * Vue
  */
-new Vue({
-  el: "#app",
-  data: {
-    text: "",
-    list: JSON.parse(localStorage.list || "[]"), // ["こんにちは", "おっす"]
+Vue.createApp({
+  data() {
+    return {
+      text: "",
+      list: JSON.parse(localStorage.list || "[]"), // ["こんにちは", "おっす"]
+    }
   },
   methods: {
     addCard: function () {
@@ -42,4 +43,4 @@ new Vue({
       localStorage.list = JSON.stringify(this.list)
     },
   },
-})
+}).mount("#app")
