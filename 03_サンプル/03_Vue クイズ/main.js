@@ -1,30 +1,31 @@
-new Vue({
-  el: "#app",
-  data: {
-    feedback: "",
-    quiz: {
-      text: "この星の名前は何でしょう？",
-      image: "Ganymede.jpg",
-      choices: [
-        {
-          text: "ゴリアテ",
-          isCorrect: false,
-          feedback:
-            "残念！ゴリアテは、旧約聖書に登場するダビデに石で殺される巨人だよ。",
-        },
-        {
-          text: "ゼニガメ",
-          isCorrect: false,
-          feedback:
-            "残念！ゼニガメは、クサガメまたはニホンイシガメの幼体だよ。",
-        },
-        {
-          text: "ガニメデ",
-          isCorrect: true,
-          feedback: "正解！ガニメデは、木星の第三惑星だよ！",
-        },
-      ],
-    },
+const Quiz = {
+  data() {
+    return {
+      feedback: "",
+      quiz: {
+        text: "この星の名前は何でしょう？",
+        image: "Ganymede.jpg",
+        choices: [
+          {
+            text: "ゴリアテ",
+            isCorrect: false,
+            feedback:
+              "残念！ゴリアテは、旧約聖書に登場するダビデに石で殺される巨人だよ。",
+          },
+          {
+            text: "ゼニガメ",
+            isCorrect: false,
+            feedback:
+              "残念！ゼニガメは、クサガメまたはニホンイシガメの幼体だよ。",
+          },
+          {
+            text: "ガニメデ",
+            isCorrect: true,
+            feedback: "正解！ガニメデは、木星の第三惑星だよ！",
+          },
+        ],
+      },
+    }
   },
   methods: {
     choiced(choice) {
@@ -40,4 +41,5 @@ new Vue({
       return "./images/" + this.quiz.image
     },
   },
-})
+}
+Vue.createApp(Quiz).mount("#app")

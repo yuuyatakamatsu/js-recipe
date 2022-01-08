@@ -1,11 +1,12 @@
-new Vue({
-  el: "#app",
-  data: {
-    red: 0,
-    green: 0,
-    colors: [
-      // { red: 0, green: 0 }
-    ],
+const Palette = {
+  data() {
+    return {
+      red: 0,
+      green: 0,
+      colors: [
+        // { red: 0, green: 0 }
+      ],
+    }
   },
   methods: {
     // マウスの位置に応じて色を変える
@@ -34,4 +35,5 @@ new Vue({
       }
     },
   },
-})
+}
+Vue.createApp(Palette).mount("#app")

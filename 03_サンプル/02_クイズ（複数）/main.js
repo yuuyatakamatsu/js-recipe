@@ -78,7 +78,7 @@ const quizzes = [
 
 // 共通の処理①
 // quizNumber番目の問題を画面に表示する
-const reloadQuiz = function(quizNumber) {
+const reloadQuiz = function (quizNumber) {
   // quizzes[quizNumber] は使いまわすので、定数に入れておく
   const quiz = quizzes[quizNumber]
 
@@ -102,7 +102,7 @@ const reloadQuiz = function(quizNumber) {
 
 // 共通の処理②
 // choiceNumber番目の選択肢を選択
-const choose = function(choiceNumber) {
+const choose = function (choiceNumber) {
   // quizzes[quizNumber].choices[choiceNumber] は使いまわすので、定数に入れておく
   const choice = quizzes[quizNumber].choices[choiceNumber]
 
@@ -120,21 +120,21 @@ const choose = function(choiceNumber) {
   }
 }
 
-choice1.onclick = function() {
+choice1.onclick = function () {
   // 0番目の選択肢を選択
   choose(0)
 }
-choice2.onclick = function() {
+choice2.onclick = function () {
   // 1番目の選択肢を選択
   choose(1)
 }
-choice3.onclick = function() {
+choice3.onclick = function () {
   // 2番目の選択肢を選択
   choose(2)
 }
 
 // 次の問題ボタンを押したら
-nextQuizButton.onclick = function() {
+nextQuizButton.onclick = function () {
   // 問題番号を１増やす
   quizNumber += 1
   // quizNumber番目の問題を読み込む

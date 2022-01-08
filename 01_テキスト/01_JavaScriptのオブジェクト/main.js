@@ -5,11 +5,11 @@ const hikakin = {
   isHappy: true,
   address: {
     country: "日本",
-    city: "東京"
+    city: "東京",
   },
-  sayHello: function() {
+  sayHello: function () {
     console.log("ブンブンハロー YouTube")
-  }
+  },
 }
 
 // 練習問題

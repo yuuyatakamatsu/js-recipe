@@ -5,7 +5,7 @@ console.log("「要素を取得する」で取得した要素 →", element)
 // 要素を取得する - 発展：子要素を取得する
 const buttons = document.getElementById("buttons")
 for (const button of buttons.children) {
-  button.onclick = function() {
+  button.onclick = function () {
     alert("clicked: " + button.textContent)
   }
 }
