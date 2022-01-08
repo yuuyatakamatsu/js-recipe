@@ -8,6 +8,7 @@
     "christian-kohler.npm-intellisense",
     "coenraads.bracket-pair-colorizer-2",
     "aaron-bond.better-comments",
-    "johnsoncodehk.volar"
+    "johnsoncodehk.volar",
+    "hollowtree.vue-snippets"
   ]
 }
