@@ -1,4 +1,44 @@
 {
-  "extensions.ignoreRecommendations": false,
-  "liveServer.settings.port": 5555,
+  "extensions.ignoreRecommendations": false, // 拡張機能のインストールを促す
+  "liveServer.settings.port": 5555, // LiveServerのポートを5555に統一する
+
+  // エキスパートコースでの設定をjs-recipe workspaceでも上書きする
+
+  // ここから
+  // エキスパートコースでの設定
+
+  //
+  // 一般設定
+  //
+  "editor.renderLineHighlight": "all", // 選択行を行番号含めすべてハイライト
+  "editor.renderWhitespace": "boundary", // 空白文字を表示する
+  "window.title": "${activeEditorMedium}${separator}${rootName}", // ファイル名を詳しく表示
+  "editor.guides.bracketPairs": true, // ブラケット ペア ガイドを有効にする。
+  "editor.bracketPairColorization.enabled": true, // 角かっこのペアの色付けを有効にする。
+
+  //
+  // Emmet 設定
+  //
+  "emmet.triggerExpansionOnTab": true, // tabキーで変換
+  "emmet.variables": {
+    "lang": "ja" // ! で展開されるテンプレートの lang を ja に
+  },
+
+  //
+  // フォーマッター (ESLint & Prettier) 設定
+  //
+  "files.autoSave": "off", // prettier によるフォーマットを手動で保存時に行うために、autoSave を off に設定する
+  "editor.defaultFormatter": "esbenp.prettier-vscode", // フォーマッタを prettier に設定する
+  "editor.formatOnSave": true, // ファイルを保存したときに、コードを整形する
+  "editor.codeActionsOnSave": {
+    // ファイルを保存したときに、エラーを ESlint で検証する
+    "source.fixAll.eslint": true
+  },
+  "eslint.validate": [
+    // ESLint によるコードチェックを、以下の言語について行う
+    "html",
+    "js",
+    "vue"
+  ]
+  // ここまで
 }

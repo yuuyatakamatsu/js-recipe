@@ -6,9 +6,10 @@
     "ritwickdey.liveserver",
     "ms-vsliveshare.vsliveshare",
     "christian-kohler.npm-intellisense",
-    "coenraads.bracket-pair-colorizer-2",
     "aaron-bond.better-comments",
     "johnsoncodehk.volar",
-    "hollowtree.vue-snippets"
+    "hollowtree.vue-snippets",
+    "mhutchie.git-graph",
+    "GitHub.vscode-pull-request-github"
   ]
 }
