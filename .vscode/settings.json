@@ -15,7 +15,6 @@
   "window.title": "${activeEditorMedium}${separator}${rootName}", // ファイル名を詳しく表示
   "editor.guides.bracketPairs": true, // ブラケット ペア ガイドを有効にする。
   "editor.bracketPairColorization.enabled": true, // 角かっこのペアの色付けを有効にする。
-
   //
   // Emmet 設定
   //
@@ -39,6 +38,11 @@
     "html",
     "js",
     "vue"
-  ]
+  ],
+  //
+  // Githubの認証設定
+  //
+  "git.terminalAuthentication": true, //
+  "github.gitAuthentication": true // 初回のpush時にGithub 拡張機能を使った認証を求めるようにする
   // ここまで
 }
